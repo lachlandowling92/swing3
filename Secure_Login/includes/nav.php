@@ -1,21 +1,18 @@
 <nav>
+	<h2>Menu</h2>
 	<?php
-	$item1 = array('location'=>'/index.php?location=page1&action=view', 'link' => 'Login');
+	$item1 = array('location'=>'/index.php?location=page1&action=view', 'link' => 'Page 1');
 	$item2 = array('location'=>'/index.php?location=page2&action=view', 'link' => 'Page 2');
-	$item4 = array('location'=>'/index.php?location=page4&action=view', 'link' => 'Register');
-	$menu = array($item1, $item2, $item4);
+	$menu = array($item1, $item2);
 	?>
 	<ul class="menu">
-		<li>|</li>
 		<?php foreach($menu as $menuItem) : ?>
 		<li>
 			<a href="<?php echo SITE_ROOT . $menuItem['location']; ?>">
 				<?php  echo $menuItem['link']; ?>
 			</a>
 		</li>
-		<li>|</li>
 		<?php endforeach; ?>
 	</ul>
 </nav>
-		<br/>
 <?php echo "\n"; ?>
